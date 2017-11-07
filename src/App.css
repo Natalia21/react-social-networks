@@ -26,3 +26,22 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.container {
+  float: none;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container form {
+  padding: 20px;
+  padding-bottom: 60px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fbfbfb;
+  margin-top: 30px;
+}
+
+.m-20 {
+  margin: 20px 0;
+}
