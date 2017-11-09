@@ -45,3 +45,57 @@
 .m-20 {
   margin: 20px 0;
 }
+
+.posts {
+  list-style: decimal;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.posts li {
+  padding: 5px;
+}
+
+.so-owner {
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fbfbfb;
+  padding: 20px;
+}
+
+.so-owner .photo-container {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.so-owner .photo-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.so-owner .owner-name {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.posts-container {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fbfbfb;
+  display: inline-block;
+  min-height: 254px;
+  padding: 10px;
+  margin-left: 10px;
+  padding-right: 30px;
+  vertical-align: top;
+}
+
+.navigation {
+  margin: 20px;
+  font-size: 16px;
+  text-decoration: underline;
+}

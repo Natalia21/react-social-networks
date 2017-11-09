@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
 import { connect } from 'react-redux';
-import logo from './logo.svg';
-import './App.css';
-import { getPosts } from './actions';
-import Posts from './components/posts';
+import { getPosts } from '../actions';
+import Posts from './posts';
 
 import 'react-select/dist/react-select.css';
 
-class App extends Component {
+class Home extends Component {
 
   constructor(props) {
     super(props);
@@ -43,18 +41,11 @@ class App extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.dispatch(getPosts(this.state.selectedNetwork, this.state.userId));
+    this.props.history.push('/posts');
   }
 
   render() {
-    const { posts } = this.props;
-
-    console.log('posts', posts);
-
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
         <div className="col-md-6 container">
           <form onSubmit={this.handleSubmit}>
             <Select
@@ -66,10 +57,8 @@ class App extends Component {
             <button type="submit" className="btn btn-primary">Get my posts</button>
           </form>
         </div>
-        <Posts posts={posts}/>
-      </div>
     );
   }
 }
 
-export default connect(state => state)(App);
+export default connect(state => state)(Home);
